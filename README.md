@@ -61,7 +61,7 @@ jaki_kiwen::jaki_kiwen! {
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
 syntax. *o lukin a*, that's it.
 
-## les contributions
+## *o pana!*
 
 First of all, _sina pona mute_ for considering participating to this joke,
 Sonja Lang will thank you later! Feel free to throw in a few identifiers
@@ -70,7 +70,7 @@ Pona for `main`) branch.
 
 Please don't introduce any *unpa*, though: we will not excuse your Toki Pona.
 
-## but why would you do zat
+## but why would you do *ni*
 
 - horsin around
 - playing with raw proc macros
@@ -120,12 +120,6 @@ Please don't introduce any *unpa*, though: we will not excuse your Toki Pona.
 - Estonian: [rooste](https://github.com/hanshs/rooste)
 - All of the above: [unirust](https://github.com/charyan/unirust)
 
-## un grand merci
+## nasin pi ken pana
 
-- [@VentGrey](https://twitter.com/VentGrey) for making a logo!
-
-## la license
-
-[License Publique Rien à Branler](http://sam.zoy.org/lprab/),
-_le_ official translation of the [WTFPL](http://www.wtfpl.net/)
-by the same author.
+[WTFPL](http://www.wtfpl.net/).
