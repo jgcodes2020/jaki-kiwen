@@ -1,6 +1,6 @@
 # jaki kiwen
 
-<!-- ![](https://github.com/bnjbvr/rouille/raw/principale/logo.jpeg) -->
+![](https://github.com/jgcodes2020/jaki-kiwen/raw/suli-nanpa-wan/logo.png)
 
 Aren't you _pilin lape_ from writing Rust programs in English? Do you like saying
 "pakala a" a lot? Would you like to try something different, in a super simplified
