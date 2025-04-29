@@ -25,7 +25,7 @@ Here's an example of what can be achieved with *jaki kiwen*:
 
 ```rust
 jaki_kiwen::jaki_kiwen! {
-    extern poki_suli jaki_kiwen;
+    weka poki_suli jaki_kiwen;
     o_kepeken std::collections::LipuNimi sama LipuN;
 
     nasin_suli NimiEnKon {
@@ -122,4 +122,4 @@ Please don't introduce any *unpa*, though: we will not excuse your Toki Pona.
 
 ## nasin pi ken pana
 
-[WTFPL](http://www.wtfpl.net/).
+[WTFPL](http://www.wtfpl.net/). A translation to Toki Pona is provided at `LICENSE-tok.txt`.

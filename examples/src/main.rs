@@ -1,5 +1,5 @@
 jaki_kiwen::jaki_kiwen! {
-    extern poki_suli jaki_kiwen;
+    weka poki_suli jaki_kiwen;
     o_kepeken std::collections::LipuNimi sama LipuN;
 
     nasin_suli NimiEnKon {
