@@ -1,92 +1,78 @@
-// rouille::rouille! {
-//     externe cagette rouille;
-
-//     utilisons std::collections::Dictionnaire comme Dico;
-
-//     convention CléValeur {
-//         fonction écrire(&soi, clé: Chaîne, valeur: Chaîne);
-//         fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne>;
-//     }
-
-//     statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaîne, Chaîne>> = Rien;
-
-//     structure Concrète;
-
-//     réalisation CléValeur pour Concrète {
-//         fonction écrire(&soi, clé: Chaîne, valeur: Chaîne) {
-//             soit dico = dangereux {
-//                 DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
-//             };
-//             dico.insérer(clé, valeur);
-//         }
-//         fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne> {
-//             si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-//                 Bien(dico.lire(&clé))
-//             } sinon {
-//                 Arf("fetchez le dico".vers())
-//             }
-//         }
-//     }
-
-//     public(cagette) fonction peut_etre(i: u32) -> PeutÊtre<Résultat<u32, Chaîne>> {
-//         si i % 2 == 1 {
-//             si i == 42 {
-//                 Quelque(Arf(Chaîne::depuis("merde")))
-//             } sinon {
-//                 Quelque(Bien(33))
-//             }
-//         } sinon {
-//             Rien
-//         }
-//     }
-
-//     asynchrone fonction exemple() {
-//     }
-
-//     asynchrone fonction exemple2() {
-//         exemple().attend;
-//     }
-
-//     fonction principale() {
-//         soit mutable x = 31;
-
-//         selon x {
-//             42 => {
-//                 affiche!("omelette du fromage")
-//             }
-//             _ => affiche!("voila")
-//         }
-
-//         pour i de 0..10 {
-//             soit val = boucle {
-//                 arrête i;
-//             };
-
-//             tant que x < val {
-//                 x += 1;
-//             }
-
-//             x = si soit Quelque(resultat) = peut_etre(i) {
-//                 resultat.déballer()
-//             } sinon {
-//                 12
-//             };
-//         }
-
-//         //secondaire();
-//     }
-
-//     #[légal(code_inaccessible)]
-//     fonction secondaire() {
-//         merde!("oh non"); // for the true French experience
-//         calisse!("tabernacle"); // for friends speaking fr-ca
-//         oups!("fetchez la vache"); // in SFW contexts
-//     }
-// }
-
-
 jaki_kiwen::jaki_kiwen! {
+    extern poki_suli jaki_kiwen;
+    o_kepeken std::collections::LipuNimi sama LipuN;
+
+    nasin_suli NimiEnKon {
+        nasin o_pana(&mi, nimi: Linja, kon: Linja);
+        nasin o_alasa(&mi, nimi: Linja) -> IjoPini<IjoKen<&Linja>, Linja>;
+    }
+
+    kule_awen ken_ante LIPU_NIMI: IjoKen<LipuN<Linja, Linja>> = IjoAla;
+
+    tomo IjoSijelo;
+
+    nasin_lon NimiEnKon lon_ale IjoSijelo {
+        nasin o_pana(&mi, nimi: Linja, kon: Linja) {
+            o_lon_e lipu = ike_a {
+                LIPU_NIMI.o_wile_anu_pana_kepeken(NasinOpen::nasin_open)
+            };
+            lipu.o_pana_lon_insa_e(nimi, kon);
+        }
+        nasin o_alasa(&mi, nimi: Linja) -> IjoPini<IjoKen<&Linja>, Linja> {
+            lon_la o_lon_e IjoLon(lipu) = ike_a { LIPU_NIMI.o_kama_ijo_tan() } {
+                Pona(lipu.o_wile_tan(&nimi))
+            }
+            ala_la {
+                Ike("lipu li ala a!".o_ante_tawa())
+            }
+        }
+    }
+
+    open_suli(poki_suli) nasin ijo_ken(n: u32) -> IjoKen<IjoPini<u32, Linja>> {
+        lon_la n % 2 == 1 {
+            lon_la n == 42 {
+                IjoLon(Ike(Linja::tan("ike a!")))
+            }
+            ala_la {
+                IjoLon(Pona(33))
+            }
+        }
+        ala_la {
+            IjoAla
+        }
+    }
+
+    tenpo_ante nasin ijo_pi_toki_ken() {}
+
+    tenpo_ante nasin ijo_pi_toki_ken_nanpa2() {
+        ijo_pi_toki_ken().o_awen
+    }
+
     nasin suli_nanpa_wan() {
-        o_toki_e!("toki a, ale o!");
+        o_lon_e ken_ante x = 31;
+
+        o_lukin_e x {
+            42 => {
+                o_toki_e!("kijetesantakalu")
+            }
+            _ => o_toki_e!("o lukin")
+        }
+
+        lon_ale i lon_insa 0..10 {
+            o_lon_e nanpa = o_sike {
+                pini_a i;
+            };
+
+            lon_la_o_sike x < nanpa {
+                x += 1;
+            }
+
+            x = lon_la o_lon_e IjoLon(nanpa_tan) = ijo_ken(i) {
+                nanpa_tan.o_open()
+            }
+            ala_la {
+                12
+            };
+        }
     }
 }

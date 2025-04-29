@@ -1,88 +1,74 @@
-# rouille
+# jaki kiwen
 
-![](https://github.com/bnjbvr/rouille/raw/principale/logo.jpeg)
+<!-- ![](https://github.com/bnjbvr/rouille/raw/principale/logo.jpeg) -->
 
-Aren't you _le tired_ from writing Rust programs in English? Do you like saying
-"merde" a lot? Would you like to try something different, in an exotic and
-funny-sounding language? Would you want to bring some French touch to your
-programs?
+Aren't you _pilin lape_ from writing Rust programs in English? Do you like saying
+"pakala a" a lot? Would you like to try something different, in a super simplified
+language? Would you want to bring some Toki Pona touch to your programs?
 
-**rouille** (French for _Rust_) is here to save your day, as it allows you to
-write Rust programs in French, using French keywords, French function names,
-French idioms.
+**jaki kiwen** (Toki Pona for _Rust_) is here to save your day, as it allows you to
+write Rust programs in Toki Pona, using Toki Pona keywords, Toki Pona function names,
+Toki Pona idioms.
 
-This has been designed to be used as the official programming language to
-develop the future French sovereign operating system. 
+This has been designed to be used as the official programming language for 
+*ma pona pi toki pona*.
 
-If you're from the French or any other governement with French as an official 
-language: I will be awaiting your donations on
-[liberapay](https://liberapay.com/bnjbvr/).
-
-You're from Quebec (or elsewhere) and don't feel at ease using only French words? 
+You're a *jan sin* and don't feel at ease using only Toki Pona words? 
 
 Don't worry!
-French Rust is fully compatible with English-Rust, so you can mix both at your
+Toki Pona Rust is fully compatible with English Rust, so you can mix both at your
 convenience.
 
-Here's an example of what can be achieved with Rouille:
+Here's an example of what can be achieved with *jaki kiwen*:
 
-### trait and impl (aka convention et réalisation)
+### trait and impl (aka nasin_suli en nasin_lon)
 
 ```rust
-rouille::rouille! {
-    utilisons std::collections::Dictionnaire comme Dico;
+jaki_kiwen::jaki_kiwen! {
+    extern poki_suli jaki_kiwen;
+    o_kepeken std::collections::LipuNimi sama LipuN;
 
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaîne, valeur: Chaîne);
-        fonction lire(&soi, clé: Chaîne) -> PeutÊtre<&Chaîne>;
+    nasin_suli NimiEnKon {
+        nasin o_pana(&mi, nimi: Linja, kon: Linja);
+        nasin o_alasa(&mi, nimi: Linja) -> IjoPini<IjoKen<&Linja>, Linja>;
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaîne, Chaîne>> = Rien;
+    kule_awen ken_ante LIPU_NIMI: IjoKen<LipuN<Linja, Linja>> = IjoAla;
 
-    structure Concrète;
+    tomo IjoSijelo;
 
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaîne, valeur: Chaîne) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
+    nasin_lon NimiEnKon lon_ale IjoSijelo {
+        nasin o_pana(&mi, nimi: Linja, kon: Linja) {
+            o_lon_e lipu = ike_a {
+                LIPU_NIMI.o_wile_anu_pana_kepeken(NasinOpen::nasin_open)
             };
-            dico.insérer(clé, valeur);
+            lipu.o_pana_lon_insa_e(nimi, kon);
         }
-        fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
+        nasin o_alasa(&mi, nimi: Linja) -> IjoPini<IjoKen<&Linja>, Linja> {
+            lon_la o_lon_e IjoLon(lipu) = ike_a { LIPU_NIMI.o_kama_ijo_tan() } {
+                Pona(lipu.o_wile_tan(&nimi))
+            }
+            ala_la {
+                Ike("lipu li ala a!".o_ante_tawa())
             }
         }
     }
 }
 ```
 
-### Support for regional languages
-
-```rust
-#[légal(code_inaccessible)]
-fonction secondaire() {
-    merde!("oh non"); // for the true French experience
-    calisse!("tabarnak"); // for friends speaking fr-ca
-    oups!("fetchez la vache"); // in SFW contexts
-}
-```
-
 ### Other examples
 
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
-syntax. Voilà, that's it.
+syntax. *o lukin a*, that's it.
 
 ## les contributions
 
-First of all, _merci beaucoup_ for considering participating to this joke, the
-French government will thank you later! Feel free to throw in a few identifiers
-here and there, and open a pull-request against the `principale` (French for
-`main`) branch.
+First of all, _sina pona mute_ for considering participating to this joke,
+Sonja Lang will thank you later! Feel free to throw in a few identifiers
+here and there, and open a pull request against the `suli-nanpa-wan` (Toki
+Pona for `main`) branch.
 
-Please don't introduce swear words, though: we will not excuse your French.
+Please don't introduce any *unpa*, though: we will not excuse your Toki Pona.
 
 ## but why would you do zat
 
@@ -90,11 +76,11 @@ Please don't introduce swear words, though: we will not excuse your French.
 - playing with raw proc macros
 - making a bit of fun about programming languages that do this seriously,
   though I can see their utility.
-- winking at [Marcel](https://github.com/brouberol/marcel)
-- c'est chic
+- ni li sama nimi kijetesantakalu
 
 ## Other languages
 
+- French: [rouille](https://github.com/jeroenhd/roest)
 - Dutch: [roest](https://github.com/jeroenhd/roest)
 - German: [rost](https://github.com/michidk/rost)
 - Polish: [rdza](https://github.com/phaux/rdza)
