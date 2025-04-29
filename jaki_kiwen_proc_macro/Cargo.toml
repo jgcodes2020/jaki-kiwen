@@ -1,0 +1,10 @@
+[package]
+name = "jaki_kiwen"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+jkl_nasin_mama = { path = "../jaki_kiwen_la_nasin_ante_mama" }
+
+[lib]
+proc-macro = true
